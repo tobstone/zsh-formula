@@ -50,7 +50,7 @@ alias git="hub"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(debian docker git github gitignore node npm nvm python rsync sudo tmux urltools)
+plugins=(debian docker git github gitignore history history-substring-search jsontools last-working-dir node npm nvm python rsync sudo tmux urltools web-search) # gpg-agent ssh-agent
 
 source $ZSH/oh-my-zsh.sh
 
