@@ -1,0 +1,12 @@
+# zshenv
+# this file should contain commands to set the command search path,
+# plus other important environment variables; it should not contain
+# commands that produce output or assume the shell is attached to
+# a tty
+
+if [ "`id -u`" -eq 0 ]; then
+  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+else
+  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:$HOME/bin"
+fi
+export PATH
