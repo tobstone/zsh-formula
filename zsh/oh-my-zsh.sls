@@ -1,7 +1,7 @@
 oh_my_zsh:
   git.latest:
-    name: git://github.com/robbyrussell/oh-my-zsh.git
-    target: /etc/zsh/oh-my-zsh
+    - name: git://github.com/robbyrussell/oh-my-zsh.git
+    - target: /etc/zsh/oh-my-zsh
   file.directory:
     - name: /etc/zsh/oh-my-zsh
     - dir_mode: 755
