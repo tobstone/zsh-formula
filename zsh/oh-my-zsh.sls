@@ -14,11 +14,11 @@ oh_my_zsh_{{ name }}:
     - name: {{ home }}/.oh-my-zsh
     - dir_mode: 755
     - file_mode: 644
-    - owner: {{ name }}
+    - user: {{ name }}
     - group: {{ name }}
     - recurse:
       - mode
-      - owner
+      - user
       - group
     - require:
       - git: oh_my_zsh_{{ name }}
