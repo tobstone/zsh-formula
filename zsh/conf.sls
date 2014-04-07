@@ -4,36 +4,40 @@
 {%- endif -%}}
 {%- set home = user.get('home', "/home/%s" % name) -%}
 
-zshenv:
+{{ home }}/.zshenv:
   file.managed:
-    - name: {{ home }}/.zshenv
     - source: salt://zsh/files/zshenv
     - template: jinja
     - context: {{ user }}
     - mode: 644
+    - require:
+      - pkg: zsh
 
-zprofile:
+{{ home }}/.zprofile:
   file.managed:
-    - name: {{ home }}/.zprofile
     - source: salt://zsh/files/zprofile
     - template: jinja
     - context: {{ user }}
     - mode: 644
+    - require:
+      - pkg: zsh
 
-zshrc:
+{{ home }}/.zshrc:
   file.managed:
-    - name: {{ home }}/.zshrc
     - source: salt://zsh/files/zshrc
     - template: jinja
     - context: {{ user }}
     - mode: 644
+    - require:
+      - pkg: zsh
 
-zlogin:
+{{ home }}/.zlogin:
   file.managed:
-    - name: {{ home }}/.zlogin
     - source: salt://zsh/files/zlogin
     - template: jinja
     - context: {{ user }}
     - mode: 644
+    - require:
+      - pkg: zsh
 
 {% endfor %}
