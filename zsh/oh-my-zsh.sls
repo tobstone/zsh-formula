@@ -1,7 +1,7 @@
 {% for name, user in pillar.get('zsh', {}).items() %}
 {%- if user == None -%}
 {%- set user = {} -%}
-{%- endif -%}}
+{%- endif -%}
 {%- set home = user.get('home', "/home/%s" % name) %}
 
 oh_my_zsh_{{ name }}:
