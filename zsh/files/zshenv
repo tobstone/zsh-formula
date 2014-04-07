@@ -4,6 +4,6 @@
 # commands that produce output or assume the shell is attached to
 # a tty
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/games:/usr/games:$HOME/bin{{ (path and ":") + (path or "") }}"
+export PATH="{{ path }}"
 
 {{ zshenv }}

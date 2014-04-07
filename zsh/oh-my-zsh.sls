@@ -17,6 +17,6 @@ oh_my_zsh_{{ name }}:
     - recurse:
       - mode
     - require:
-      - git: oh_my_zsh
+      - git: oh_my_zsh_{{ name }}
 
 {% endfor %}
