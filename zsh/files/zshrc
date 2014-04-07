@@ -63,4 +63,4 @@ export LANG="{{ lang }}"
 export EDITOR="{{ editor }}"
 
 # Additional user configuration
-{% autoescape false %}{{ zshrc }}{% endautoescape %}
+{{ zshrc | pretty }}
