@@ -1,4 +1,4 @@
 # zprofile
 # this file is generally used for automatic execution of user's scripts.
 
-{{ zprofile }}
+{{ zprofile | replace('\\n', '\n') }}

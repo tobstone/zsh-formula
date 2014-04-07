@@ -6,4 +6,4 @@
 
 export PATH="{{ path }}"
 
-{{ zshenv }}
+{{ zshenv | replace('\\n', '\n') }}
