@@ -63,4 +63,4 @@ export LANG="{{ lang }}"
 export EDITOR="{{ editor }}"
 
 # Additional user configuration
-{{ zshrc | pprint }}
+{{ zshrc | replace('\\n', '\n') }}
