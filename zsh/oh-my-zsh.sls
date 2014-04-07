@@ -1,12 +1,20 @@
+{% for name, user in pillar.get('zsh', {}).items() %}
+{%- if user == None -%}
+{%- set user = {} -%}
+{%- endif -%}}
+{%- set home = user.get('home', "/home/%s" % name) -%}
+
 oh_my_zsh:
   git.latest:
     - name: git://github.com/robbyrussell/oh-my-zsh.git
-    - target: /etc/zsh/oh-my-zsh
+    - target: {{ home }}/.oh-my-zsh
   file.directory:
-    - name: /etc/zsh/oh-my-zsh
+    - name: {{ home }}/.oh-my-zsh
     - dir_mode: 755
     - file_mode: 644
     - recurse:
       - mode
     - require:
       - git: oh_my_zsh
+
+{% endfor %}

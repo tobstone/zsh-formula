@@ -4,9 +4,6 @@
 # commands that produce output or assume the shell is attached to
 # a tty
 
-if [ "`id -u`" -eq 0 ]; then
-  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-else
-  PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:$HOME/bin"
-fi
-export PATH
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/games:/usr/games:$HOME/bin{{ (path and ":") + (path or "") }}"
+
+{{ zshenv }}

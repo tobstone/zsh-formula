@@ -1,0 +1,27 @@
+zsh:
+  michael:
+    home: "/home/michael"
+    theme: robbyrussell
+    editor: vim
+    lang: en_US.UTF-8
+    plugins:
+      - debian
+      - docker
+      - git
+      - github
+      - gitignore
+      - history
+      - history-substring-search
+      - jsontools
+      - last-working-dir
+      - node
+      - npm
+      - nvm
+      - python
+      - rsync
+      - sudo
+      - tmux
+      - urltools
+      - web-search
+    aliases:
+      git: hub
