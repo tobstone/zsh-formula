@@ -2,7 +2,7 @@
 {%- if user == None -%}
 {%- set user = {} -%}
 {%- endif -%}}
-{%- set home = user.get('home', "/home/%s" % name) -%}
+{%- set home = user.get('home', "/home/%s" % name) %}
 
 {{ home }}/.zshenv:
   file.managed:
