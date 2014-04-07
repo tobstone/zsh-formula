@@ -64,4 +64,6 @@ export EDITOR="{{ editor }}"
 
 # Additional user configuration
 
-{{ zshrc |replace('\n','\\\\n')}}
+{%- for line in zshrc.split('\n') %}
+{{ line }}
+{%- endfor %}
