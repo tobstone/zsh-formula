@@ -12,6 +12,8 @@
     - defaults:
       path: "/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/games:/usr/games:$HOME/bin"
       zshenv: ""
+    - user: {{ name }}
+    - group: {{ name }}
     - mode: 644
     - require:
       - pkg: zsh
@@ -23,6 +25,8 @@
     - context: {{ user }}
     - defaults:
       zprofile: ""
+    - user: {{ name }}
+    - group: {{ name }}
     - mode: 644
     - require:
       - pkg: zsh
@@ -39,6 +43,8 @@
       lang: "en_US.UTF-8"
       editor: "nano"
       zshrc: ""
+    - user: {{ name }}
+    - group: {{ name }}
     - mode: 644
     - require:
       - pkg: zsh
@@ -50,6 +56,8 @@
     - context: {{ user }}
     - defaults:
       zlogin: ""
+    - user: {{ name }}
+    - group: {{ name }}
     - mode: 644
     - require:
       - pkg: zsh
