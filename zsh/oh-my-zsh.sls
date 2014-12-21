@@ -13,7 +13,7 @@ oh_my_zsh_{{ name }}:
   file.directory:
     - name: {{ home }}/.oh-my-zsh
     - dir_mode: 755
-    - file_mode: 644
+    - file_mode: 755
     - user: {{ name }}
     - group: {{ name }}
     - recurse:
